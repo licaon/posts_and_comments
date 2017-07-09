@@ -1,0 +1,23 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    /**
+    * Rule set to error (2)
+    */
+    // Restrict React file extensions to .js and .jsx
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+
+    /**
+    * Rule set to off (0)
+    */
+    /**
+    * There seems to be some incompatibility in some eslint package dependencies
+    * we should turn off this rule for now
+    **/
+    "jsx-a11y/href-no-hash": "off"
+  }
+}

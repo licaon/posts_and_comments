@@ -1,7 +1,7 @@
 const { join } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const sourcePath = join(__dirname, './src');
 const buildPath = join(__dirname, './dist');
@@ -16,13 +16,22 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
           'babel-loader',
         ],
-      }
-    ]
+      },
+    ],
   },
   devServer: {
     contentBase: sourcePath,
@@ -56,5 +65,5 @@ module.exports = {
       path: buildPath,
       filename: 'index.html',
     }),
-  ]
+  ],
 };
