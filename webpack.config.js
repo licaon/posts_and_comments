@@ -1,6 +1,7 @@
 const { join } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const sourcePath = join(__dirname, './src');
 const buildPath = join(__dirname, './dist');
@@ -48,6 +49,7 @@ module.exports = {
     },
   },
   plugins: [
+    new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: join(sourcePath, 'index.html'),

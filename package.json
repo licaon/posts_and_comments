@@ -6,8 +6,20 @@
   "author": "Raul Macarie <raul.macarie@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "dev": "better-npm-run dev",
+    "start": "better-npm-run start",
+    "build": "better-npm-run build"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "webpack-dashboard -t 'Posts & Comments' -- webpack-dev-server"
+    },
+    "start": {
+      "command": "webpack-dev-server"
+    },
+    "build": {
+      "command": "webpack"
+    }
   },
   "dependencies": {
     "react": "^15.6.1",
@@ -19,8 +31,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "better-npm-run": "^0.0.15",
     "html-webpack-plugin": "^2.29.0",
     "webpack": "^3.1.0",
+    "webpack-dashboard": "^0.4.0",
     "webpack-dev-server": "^2.5.1"
   }
 }
