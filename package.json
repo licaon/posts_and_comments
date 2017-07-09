@@ -1,0 +1,8 @@
+{
+  "name": "posts-and-comments",
+  "version": "0.0.1",
+  "description": "This is a basic Posts & Comments App, written using ReactJS",
+  "main": "index.js",
+  "author": "Raul Macarie <raul.macarie@gmail.com>",
+  "license": "MIT"
+}
