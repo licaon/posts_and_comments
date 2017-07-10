@@ -10,7 +10,8 @@
     "start": "better-npm-run start",
     "build": "better-npm-run build",
     "lint": "better-npm-run lint",
-    "test": "better-npm-run test"
+    "test": "better-npm-run test",
+    "test:watch": "better-npm-run test:watch"
   },
   "betterScripts": {
     "dev": {
@@ -26,6 +27,9 @@
       "command": "eslint ./src/ ./webpack.config.js -f table --ext .js"
     },
     "test": {
+      "command": "jest"
+    },
+    "test:watch": {
       "command": "jest --watch"
     }
   },

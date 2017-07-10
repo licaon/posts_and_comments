@@ -35,6 +35,25 @@ $ yarn dev
 
 **OS X Terminal.app users:** Make sure that **View → Allow Mouse Reporting** is enabled, otherwise scrolling through logs and modules won't work. If your version of Terminal.app doesn't have this feature, you may want to check out an alternative such as [iTerm2](https://www.iterm2.com/).
 
+## Running tests
+
+### Running test suite
+
+To execute the entire test suite
+
+```
+yarn test
+```
+
+### Runing test in watch mode
+
+To execute the test suite in dev mode
+
+```
+yarn test:watch
+```
+
+## Extra Info
 **Running in Bash for Windows** If you get an error: _Error: addMembership EINVAL_, this is an error with webpack-dev-server check [this](https://github.com/webpack/webpack-dev-server/issues/955) for a temporally solution
 
 #``TBC``
