@@ -3,6 +3,15 @@
   "env": {
     "browser": true
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "."
+        ]
+      }
+    }
+  },
   "parser": "babel-eslint",
   "rules": {
     /**

@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
@@ -7,7 +7,13 @@ const sourcePath = join(__dirname, './src');
 const buildPath = join(__dirname, './dist');
 
 module.exports = {
-  entry: sourcePath,
+  entry: {
+    main: [
+      'webpack/hot/only-dev-server',
+      'webpack-dev-server/client?http://0.0.0.0:3000',
+      sourcePath,
+    ],
+  },
   output: {
     filename: 'bundle_[hash].js',
     path: buildPath,
@@ -31,6 +37,12 @@ module.exports = {
           'babel-loader',
         ],
       },
+    ],
+  },
+  resolve: {
+    modules: [
+      resolve(__dirname),
+      'node_modules',
     ],
   },
   devServer: {
