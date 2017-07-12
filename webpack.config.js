@@ -69,6 +69,7 @@ module.exports = {
       },
     },
   },
+  devtool: 'cheap-eval-source-map',
   plugins: [
     new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),

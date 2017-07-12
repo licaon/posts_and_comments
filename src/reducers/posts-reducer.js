@@ -1,25 +1,25 @@
 import clone from 'clone';
 
-import { START_LOADING_DATA, END_LOADING_DATA } from 'src/constants/action-types';
+import { ADD_POST, DELETE_POST } from 'src/constants/action-types';
 
 const initialState = {
-  loading: false,
+  posts: [],
 };
 
 // Reducer that keeps track of all HTTP requests
-function HttpRequestReducer(state = initialState, action) {
+function PostsReducer(state = initialState, action) {
   Object.freeze(state);
   const newState = clone(state);
 
   switch (action.type) {
-    case START_LOADING_DATA: {
+    case ADD_POST: {
       return Object.assign({}, newState, {
-        loading: true,
+        posts: newState.posts.concat(action.payload),
       });
     }
-    case END_LOADING_DATA: {
+    case DELETE_POST: {
       return Object.assign({}, newState, {
-        loading: false,
+        posts: newState.posts.filter(post => post.id !== action.payload.id),
       });
     }
     default:
@@ -27,4 +27,4 @@ function HttpRequestReducer(state = initialState, action) {
   }
 }
 
-export default HttpRequestReducer;
+export default PostsReducer;
