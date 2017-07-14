@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Post from 'src/components/posts/post';
+import Post from 'src/containers/posts/post';
 
 const Posts = ({ posts }) => (
   <div>

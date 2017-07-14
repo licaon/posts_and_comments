@@ -10,7 +10,7 @@ const UserFilter = ({ value, users, onValueChange }) => {
     <div>
       <label htmlFor="searchInput">
         Users:
-        <select value={value}onChange={onChange}>
+        <select value={value} onChange={onChange}>
           <option value="">All</option>
           {userList()}
         </select>

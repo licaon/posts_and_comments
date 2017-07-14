@@ -12,6 +12,7 @@ function* rootSaga() {
     takeEvery(ActionTypes.START_LOADING_DATA, HttpRequestSagas.startHttpRequest),
     takeEvery(ActionTypes.GET_POSTS, PostsSagas.getPosts),
     takeEvery(ActionTypes.GET_USERS, UsersSagas.getPosts),
+    takeEvery(ActionTypes.REQUEST_POST_DELETE, PostsSagas.deletePosts),
 
   ];
 }
