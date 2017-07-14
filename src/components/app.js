@@ -1,16 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const App = ({ text }) => (
-  <div>{text}</div>
+import Posts from 'src/containers/posts/posts';
+
+const App = () => (
+  <div>
+    <Posts />
+  </div>
 );
-
-App.defaultProps = {
-  text: 'Initial structure',
-};
-
-App.propTypes = {
-  text: PropTypes.string,
-};
 
 export default App;

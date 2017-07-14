@@ -23,7 +23,6 @@
     /**
     * Rules set to warn (1)
     */
-    "import/prefer-default-export": "warn",
 
     /**
     * Rule set to off (0)
@@ -33,6 +32,9 @@
     * we should turn off this rule for now
     **/
     "jsx-a11y/href-no-hash": "off",
-    "import/no-dynamic-require": "off"
+    "import/no-dynamic-require": "off",
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off"
   }
 }
