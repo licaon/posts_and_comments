@@ -1,7 +1,8 @@
 import { put } from 'redux-saga/effects';
 
-import { PostsActions } from 'src/actions';
+import { UsersActions, PostsActions } from 'src/actions';
 
 export function* initApp() {
   yield put(PostsActions.getPosts());
+  yield put(UsersActions.getUsers());
 }

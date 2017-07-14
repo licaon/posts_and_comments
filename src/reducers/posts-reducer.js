@@ -6,7 +6,7 @@ const initialState = {
   posts: [],
 };
 
-// Reducer that keeps track of all HTTP requests
+// Reducer that keeps track of all Posts
 function PostsReducer(state = initialState, action) {
   Object.freeze(state);
   const newState = clone(state);
