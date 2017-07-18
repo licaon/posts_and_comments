@@ -8,7 +8,7 @@ import { getSelectFiltersValue } from 'src/selectors/filters-selectors';
 
 const mapStateToProps = state => ({
   value: get(getSelectFiltersValue(state), 'user.value', ''),
-  users: getUsers(state),
+  users: [{ name: 'All', id: '' }].concat(getUsers(state)),
 });
 
 const mapDispatchToProps = dispatch => ({

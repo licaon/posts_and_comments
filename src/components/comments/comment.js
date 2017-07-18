@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Card, CardTitle, CardText } from 'react-md';
+import 'src/styles/components/comments/comment.scss';
+
 const Comment = ({ post }) => (
-  <div>
-    <h3>{post.name}</h3>
-    <p>{post.body}</p>
-  </div>
+  <Card className="comment">
+    <CardTitle title={post.name} />
+    <CardText>{post.body}</CardText>
+  </Card>
 );
 
 Comment.propTypes = {

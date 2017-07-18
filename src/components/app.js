@@ -4,7 +4,7 @@ import Filters from 'src/components/filters/filters';
 import Posts from 'src/containers/posts/posts';
 
 const App = () => (
-  <div>
+  <div className="md-grid">
     <Filters />
     <Posts />
   </div>

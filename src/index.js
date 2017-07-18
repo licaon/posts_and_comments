@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from 'src/store';
 import App from 'src/components/app';
 import { AppActions } from 'src/actions';
+import 'src/styles/styles.scss';
 
 function renderComponent() {
   const container = document.createElement('div');

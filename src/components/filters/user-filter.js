@@ -1,26 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SelectField } from 'react-md';
 
 const UserFilter = ({ value, users, onValueChange }) => {
-  const onChange = e => onValueChange(e.target.value);
-  const userList = () => users.map(
-    user => <option key={user.id} value={user.id}>{user.name}</option>,
-  );
+  const onChange = v => onValueChange(v);
+
   return (
-    <div>
-      <label htmlFor="searchInput">
-        Users:
-        <select value={value} onChange={onChange}>
-          <option value="">All</option>
-          {userList()}
-        </select>
-      </label>
-    </div>
+    <SelectField
+      defaultValue={value}
+      id="users"
+      label="Users"
+      menuItems={users}
+      itemLabel="name"
+      itemValue="id"
+      onChange={onChange}
+      className="md-full-width"
+    />
   );
 };
 
 UserFilter.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   users: PropTypes.array,
   onValueChange: PropTypes.func,
 };

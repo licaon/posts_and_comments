@@ -4,7 +4,7 @@ import UserFilter from 'src/containers/filters/user-filter';
 import Search from 'src/containers/filters/search';
 
 const Filters = () => (
-  <div>
+  <div className="md-cell">
     <UserFilter />
     <Search />
   </div>
