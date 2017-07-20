@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsSagas should execute getComments correctly 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      Object {
+        "url": "test/posts/1/comments",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`CommentsSagas should execute getComments correctly 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "comments": Array [
+          "comment1",
+        ],
+        "postId": 1,
+      },
+      "type": "ADD_COMMENTS",
+    },
+    "channel": null,
+  },
+}
+`;

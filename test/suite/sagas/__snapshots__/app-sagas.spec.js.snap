@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppSagas should execute initApp correctly 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {},
+      "type": "GET_POSTS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`AppSagas should execute initApp correctly 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {},
+      "type": "GET_USERS",
+    },
+    "channel": null,
+  },
+}
+`;

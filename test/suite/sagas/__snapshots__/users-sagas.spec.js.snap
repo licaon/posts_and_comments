@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersSagas should execute getUsers correctly 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      Object {
+        "url": "test/users",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`UsersSagas should execute getUsers correctly 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Array [
+        "user1",
+      ],
+      "type": "ADD_USER",
+    },
+    "channel": null,
+  },
+}
+`;

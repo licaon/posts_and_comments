@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsSagas should execute deletePosts correctly 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      Object {
+        "method": "DELETE",
+        "url": "test/posts/1",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`PostsSagas should execute deletePosts correctly 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Object {
+        "id": 1,
+      },
+      "type": "DELETE_POST",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`PostsSagas should execute getPosts correctly 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      Object {
+        "url": "test/posts",
+      },
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`PostsSagas should execute getPosts correctly 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Array [
+        "comment1",
+      ],
+      "type": "ADD_POST",
+    },
+    "channel": null,
+  },
+}
+`;
