@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsSelectors should execute getFilteredPosts correctly 1`] = `
+Array [
+  Object {
+    "field": "something else",
+    "id": "test",
+  },
+  Object {
+    "field": "something else",
+    "id": "something else",
+  },
+]
+`;
+
+exports[`PostsSelectors should execute getPosts correctly 1`] = `"PostsReducer.posts"`;
+
+exports[`PostsSelectors should execute getPostsFilteredBySelect correctly 1`] = `
+Array [
+  Object {
+    "field1": "test",
+    "field2": "something else",
+  },
+  Object {
+    "field1": "something else",
+    "field2": "test",
+  },
+]
+`;
+
+exports[`PostsSelectors should execute getSelectFiltersValue correctly 1`] = `
+Array [
+  Object {
+    "field1": "testing",
+    "field2": "something else",
+  },
+  Object {
+    "field1": "something else",
+    "field2": "TEST",
+  },
+]
+`;

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsSelectors should execute getComments correctly 1`] = `"CommentsReducer"`;
+
+exports[`CommentsSelectors should execute getCommentsState correctly 1`] = `"CommentsStateReducer"`;
