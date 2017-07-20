@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSelectReducer should return reducer correctly on unknown action 1`] = `Object {}`;
+
+exports[`FilterSelectReducer should update reducer correctly on ADD_SELECT_FILTER 1`] = `
+Object {
+  "select": Object {
+    "fields": Array [
+      "id",
+    ],
+    "value": "value",
+  },
+}
+`;

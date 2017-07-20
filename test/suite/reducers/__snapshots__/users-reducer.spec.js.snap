@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersReducer should return reducer correctly on unknown action 1`] = `
+Object {
+  "users": Array [],
+}
+`;
+
+exports[`UsersReducer should update reducer correctly on ADD_USER 1`] = `
+Object {
+  "users": Array [
+    Object {
+      "user": 1,
+    },
+  ],
+}
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSearchReducer should return reducer correctly on unknown action 1`] = `Object {}`;
+
+exports[`FilterSearchReducer should update reducer correctly on ADD_SEARCH_FILTER 1`] = `
+Object {
+  "search": Object {
+    "fields": Array [
+      "id",
+    ],
+    "value": "value",
+  },
+}
+`;

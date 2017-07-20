@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsReducer should return reducer correctly on unknown action 1`] = `Object {}`;
+
+exports[`CommentsReducer should update reducer correctly on ADD_COMMENTS 1`] = `
+Object {
+  "1": Array [
+    2,
+  ],
+}
+`;
+
+exports[`CommentsReducer should update reducer correctly on DELETE_POST 1`] = `Object {}`;

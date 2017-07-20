@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HttpRequestReducer should return reducer correctly on unknown action 1`] = `
+Object {
+  "loading": false,
+}
+`;
+
+exports[`HttpRequestReducer should update reducer correctly on END_LOADING_DATA 1`] = `
+Object {
+  "loading": false,
+}
+`;
+
+exports[`HttpRequestReducer should update reducer correctly on START_LOADING_DATA 1`] = `
+Object {
+  "loading": true,
+}
+`;

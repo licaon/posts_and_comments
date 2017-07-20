@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsStateReducer should return reducer correctly on unknown action 1`] = `Object {}`;
+
+exports[`CommentsStateReducer should update reducer correctly on TOGGLE_COMMENTS 1`] = `
+Object {
+  "1": false,
+  "2": true,
+}
+`;
