@@ -8,6 +8,10 @@ const config = {
     'test/suite',
     'test/utils',
   ],
+  automock: false,
+  setupFiles: [
+    './setupJest.js',
+  ],
   setupTestFrameworkScriptFile: 'jest-enzyme',
   testResultsProcessor: 'jest-junit',
   moduleNameMapper: {

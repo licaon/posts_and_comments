@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Api should execute fetchData correctly and default to GET method 1`] = `
+Object {
+  "response": "response",
+}
+`;
+
+exports[`Api should execute fetchData correctly with the right arguments 1`] = `
+Object {
+  "response": "response",
+}
+`;

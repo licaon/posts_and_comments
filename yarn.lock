@@ -3643,6 +3643,12 @@ jest-enzyme@^3.4.0:
     enzyme-matchers "^3.4.0"
     enzyme-to-json "^1.5.0"
 
+jest-fetch-mock@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.2.0.tgz#15ac5c2d32d2c888bd3d132b682a4deb17f3ab35"
+  dependencies:
+    whatwg-fetch "1.0.0"
+
 jest-haste-map@^20.0.4:
   version "20.0.4"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-20.0.4.tgz#653eb55c889ce3c021f7b94693f20a4159badf03"
@@ -6589,6 +6595,10 @@ whatwg-encoding@^1.0.1:
   resolved "https://registry.yarnpkg.com/whatwg-encoding/-/whatwg-encoding-1.0.1.tgz#3c6c451a198ee7aec55b1ec61d0920c67801a5f4"
   dependencies:
     iconv-lite "0.4.13"
+
+whatwg-fetch@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz#01c2ac4df40e236aaa18480e3be74bd5c8eb798e"
 
 whatwg-fetch@>=0.10.0:
   version "2.0.3"
