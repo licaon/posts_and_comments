@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersActions should execute action correctly with argument - #addUser 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "ADD_USER",
+}
+`;
+
+exports[`UsersActions should execute action correctly with argument - #getUsers 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "GET_USERS",
+}
+`;
+
+exports[`UsersActions should execute action correctly without argument - #addUser 1`] = `
+Object {
+  "payload": Array [],
+  "type": "ADD_USER",
+}
+`;
+
+exports[`UsersActions should execute action correctly without argument - #getUsers 1`] = `
+Object {
+  "payload": Object {},
+  "type": "GET_USERS",
+}
+`;

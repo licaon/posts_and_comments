@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsActions should execute action correctly with argument - #addComments 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "ADD_COMMENTS",
+}
+`;
+
+exports[`CommentsActions should execute action correctly with argument - #getComments 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "GET_COMMENTS",
+}
+`;
+
+exports[`CommentsActions should execute action correctly with argument - #toggleCommentsState 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "TOGGLE_COMMENTS",
+}
+`;
+
+exports[`CommentsActions should execute action correctly without argument - #addComments 1`] = `
+Object {
+  "payload": Array [],
+  "type": "ADD_COMMENTS",
+}
+`;
+
+exports[`CommentsActions should execute action correctly without argument - #getComments 1`] = `
+Object {
+  "payload": Object {},
+  "type": "GET_COMMENTS",
+}
+`;
+
+exports[`CommentsActions should execute action correctly without argument - #toggleCommentsState 1`] = `
+Object {
+  "payload": Object {},
+  "type": "TOGGLE_COMMENTS",
+}
+`;

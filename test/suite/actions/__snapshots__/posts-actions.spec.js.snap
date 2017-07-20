@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsActions should execute action correctly with argument - #addPost 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "ADD_POST",
+}
+`;
+
+exports[`PostsActions should execute action correctly with argument - #confirmPostDelete 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "DELETE_POST",
+}
+`;
+
+exports[`PostsActions should execute action correctly with argument - #getPosts 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "GET_POSTS",
+}
+`;
+
+exports[`PostsActions should execute action correctly with argument - #requestPostDelete 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "REQUEST_POST_DELETE",
+}
+`;
+
+exports[`PostsActions should execute action correctly without argument - #addPost 1`] = `
+Object {
+  "payload": Array [],
+  "type": "ADD_POST",
+}
+`;
+
+exports[`PostsActions should execute action correctly without argument - #confirmPostDelete 1`] = `
+Object {
+  "payload": Object {},
+  "type": "DELETE_POST",
+}
+`;
+
+exports[`PostsActions should execute action correctly without argument - #getPosts 1`] = `
+Object {
+  "payload": Object {},
+  "type": "GET_POSTS",
+}
+`;
+
+exports[`PostsActions should execute action correctly without argument - #requestPostDelete 1`] = `
+Object {
+  "payload": Object {},
+  "type": "REQUEST_POST_DELETE",
+}
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterssActions should execute action correctly with argument - #addSearchFilter 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "ADD_SEARCH_FILTER",
+}
+`;
+
+exports[`FilterssActions should execute action correctly with argument - #addSelectFilter 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "ADD_SELECT_FILTER",
+}
+`;
+
+exports[`FilterssActions should execute action correctly without argument - #addSearchFilter 1`] = `
+Object {
+  "payload": Object {},
+  "type": "ADD_SEARCH_FILTER",
+}
+`;
+
+exports[`FilterssActions should execute action correctly without argument - #addSelectFilter 1`] = `
+Object {
+  "payload": Object {},
+  "type": "ADD_SELECT_FILTER",
+}
+`;

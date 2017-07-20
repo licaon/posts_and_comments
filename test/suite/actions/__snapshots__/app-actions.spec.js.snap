@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppActions should execute action correctly with argument - #initApp 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "INIT",
+}
+`;
+
+exports[`AppActions should execute action correctly without argument - #initApp 1`] = `
+Object {
+  "payload": Object {},
+  "type": "INIT",
+}
+`;

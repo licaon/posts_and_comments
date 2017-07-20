@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HttpRequestActions should execute action correctly with argument - #doneLoadingData 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "END_LOADING_DATA",
+}
+`;
+
+exports[`HttpRequestActions should execute action correctly with argument - #startLoadingData 1`] = `
+Object {
+  "payload": Object {
+    "test": "test",
+  },
+  "type": "START_LOADING_DATA",
+}
+`;
+
+exports[`HttpRequestActions should execute action correctly without argument - #doneLoadingData 1`] = `
+Object {
+  "payload": Object {},
+  "type": "END_LOADING_DATA",
+}
+`;
+
+exports[`HttpRequestActions should execute action correctly without argument - #startLoadingData 1`] = `
+Object {
+  "payload": Object {},
+  "type": "START_LOADING_DATA",
+}
+`;
