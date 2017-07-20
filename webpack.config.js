@@ -8,23 +8,29 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const sourcePath = join(__dirname, './src');
 const buildPath = join(__dirname, './dist');
 
+const production = ['staging', 'prod', 'production'].includes(process.env.NODE_ENV);
+
 const extractStyles = new ExtractTextPlugin({
   filename: 'styles-[hash].min.css',
   allChunks: true,
-  disable: true,
+  disable: !production,
 });
 
 module.exports = {
   entry: {
-    main: [
-      'webpack/hot/only-dev-server',
-      'webpack-dev-server/client?http://0.0.0.0:3000',
-      'font-awesome-sass-loader!./font-awesome.config.js',
-      sourcePath,
-    ],
+    main: (production ?
+      [] :
+      [
+        'webpack/hot/only-dev-server',
+        'webpack-dev-server/client?http://0.0.0.0:3000',
+      ])
+      .concat([
+        'font-awesome-sass-loader!./font-awesome.config.js',
+        sourcePath,
+      ]),
   },
   output: {
-    filename: 'bundle_[hash].js',
+    filename: `bundle_[hash]${production && '.min'}.js`,
     path: buildPath,
     publicPath: '/',
   },
@@ -64,7 +70,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              outputStyle: 'expanded',
+              outputStyle: production ? 'compressed' : 'expanded',
             },
           }],
           fallback: 'style-loader',
@@ -100,7 +106,7 @@ module.exports = {
     extensions: ['.js'],
     mainFiles: ['index'],
   },
-  devServer: {
+  devServer: production ? undefined : {
     contentBase: sourcePath,
     historyApiFallback: true,
     port: 3000,
@@ -124,32 +130,53 @@ module.exports = {
       },
     },
   },
-  devtool: 'cheap-eval-source-map',
-  plugins: [
-    new DashboardPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        eslint: {
-          failOnError: true,
+  cache: !production,
+  devtool: production ? 'hidden-source-map' : 'eval-source-map',
+  plugins: (production
+    ? [
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          screw_ie8: true,
+          warnings: false,
+          drop_console: true,
         },
-        context: '/',
-        debug: true,
-      },
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    extractStyles,
-    new HtmlWebpackPlugin({
-      title: 'Posts & Comments',
-      inject: false,
-      template: resolve(process.cwd(), 'src', 'htmlTemplate.js'),
-      appMountId: 'app',
-      favicon: resolve(process.cwd(), 'src', 'favicon.ico'),
-      externalCSS: [
-        'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons',
-      ],
-      externalJS: [
-        // any umd builds
-      ],
-    }),
-  ],
+        output: { comments: false },
+        sourceMap: false,
+      }),
+    ]
+    : [
+      new DashboardPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+    ])
+    .concat(
+      [
+        new webpack.LoaderOptionsPlugin({
+          options: {
+            eslint: {
+              failOnError: true,
+            },
+            context: '/',
+            debug: !production,
+          },
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'chunks',
+          filename: `chunks-[hash]${production ? '.min' : ''}.js`,
+        }),
+        extractStyles,
+        new HtmlWebpackPlugin({
+          title: 'Posts & Comments',
+          inject: false,
+          template: resolve(process.cwd(), 'src', 'htmlTemplate.js'),
+          appMountId: 'app',
+          favicon: resolve(process.cwd(), 'src', 'favicon.ico'),
+          externalCSS: [
+            'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons',
+          ],
+          externalJS: [
+            // any umd builds
+          ],
+        }),
+      ]
+    ),
 };

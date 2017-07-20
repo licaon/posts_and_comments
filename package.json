@@ -6,14 +6,19 @@
   "author": "Raul Macarie <raul.macarie@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "better-npm-run dev",
-    "start": "better-npm-run start",
+    "prebuild": "npm run clean && npm run test",
     "build": "better-npm-run build",
+    "clean": "better-npm-run clean",
+    "start": "better-npm-run start",
+    "dev": "better-npm-run dev",
     "lint": "better-npm-run lint",
     "test": "better-npm-run test",
     "test:watch": "better-npm-run test:watch"
   },
   "betterScripts": {
+    "clean": {
+      "command": "rimraf dist"
+    },
     "dev": {
       "command": "webpack-dashboard -t 'Posts & Comments' -- webpack-dev-server"
     },
@@ -21,8 +26,10 @@
       "command": "webpack-dev-server"
     },
     "build": {
-      "command": "webpack"
-    },
+      "command": "webpack",
+      "env": {
+        "NODE_ENV": "production"
+      }    },
     "lint": {
       "command": "eslint ./src/ ./webpack.config.js -f table --ext .js"
     },
