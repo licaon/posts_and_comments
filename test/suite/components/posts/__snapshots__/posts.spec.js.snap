@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts component should render component correctly with posts 1`] = `
+<div
+  className="md-cell--8"
+>
+  <Connect(Post)
+    post={
+      Object {
+        "id": 1,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Posts component should render component correctly without posts 1`] = `
+<div
+  className="md-cell--8"
+/>
+`;

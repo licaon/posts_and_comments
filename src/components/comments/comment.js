@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import { Card, CardTitle, CardText } from 'react-md';
 import 'src/styles/components/comments/comment.scss';
 
-const Comment = ({ post }) => (
+const Comment = ({ comment }) => (
   <Card className="comment">
-    <CardTitle title={post.name} />
-    <CardText>{post.body}</CardText>
+    <CardTitle title={comment.name} />
+    <CardText>{comment.body}</CardText>
   </Card>
 );
 
 Comment.propTypes = {
-  post: PropTypes.object,
+  comment: PropTypes.object.isRequired,
 };
 
 export default Comment;

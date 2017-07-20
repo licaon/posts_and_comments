@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component should render component correctly 1`] = `
-<div>
-  Initial structure
-</div>
-`;
-
-exports[`App component should render component correctly with props 1`] = `
-<div>
-  new text
+exports[`Loading component should render component correctly 1`] = `
+<div
+  className="md-grid"
+>
+  <Filters />
+  <Connect(Posts) />
 </div>
 `;

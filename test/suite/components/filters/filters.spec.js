@@ -2,17 +2,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import App from 'src/components/app';
+import Filters from 'src/components/filters/filters';
 
-describe('Loading component', () => {
+describe('Filters component', () => {
   const createComponent = (props) => {
     const wrapper = shallow(
-      <App
+      <Filters
         {...props}
       />);
     return toJson(wrapper);
   };
-
   it('should render component correctly', (done) => {
     const component = createComponent();
 

@@ -73,6 +73,7 @@
     "file-loader": "^0.11.2",
     "font-awesome-sass-loader": "^2.0.1",
     "html-webpack-plugin": "^2.29.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
     "jest-enzyme": "^3.4.0",

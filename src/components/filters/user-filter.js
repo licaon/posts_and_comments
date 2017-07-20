@@ -19,13 +19,17 @@ const UserFilter = ({ value, users, onValueChange }) => {
   );
 };
 
+UserFilter.defaultProps = {
+  users: [],
+};
+
 UserFilter.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]),
   users: PropTypes.array,
-  onValueChange: PropTypes.func,
+  onValueChange: PropTypes.func.isRequired,
 };
 
 export default UserFilter;

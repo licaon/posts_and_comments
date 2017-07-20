@@ -9,6 +9,9 @@ const config = {
   ],
   setupTestFrameworkScriptFile: 'jest-enzyme',
   testResultsProcessor: 'jest-junit',
+  moduleNameMapper: {
+    '^.+\\.(css|scss)$': 'identity-obj-proxy',
+  },
 };
 
 module.exports = config;

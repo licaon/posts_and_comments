@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters component should render component correctly 1`] = `
+<div
+  className="md-cell"
+>
+  <Connect(UserFilter) />
+  <Connect(Search) />
+</div>
+`;

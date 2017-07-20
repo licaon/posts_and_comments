@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post component should render component correctly with comments 1`] = `
+<Card
+  className="post"
+  expanderIconChildren="keyboard_arrow_down"
+  expanderIconClassName="material-icons"
+  expanderTooltipPosition="left"
+>
+  <CardTitle
+    title="title"
+  />
+  <CardText
+    component="section"
+  >
+    body
+  </CardText>
+  <CardActions>
+    <div
+      className="action-buttons"
+    >
+      <ButtonTooltipedInked
+        inkTransitionEnterTimeout={450}
+        inkTransitionLeaveTimeout={300}
+        inkTransitionOverlap={150}
+        label="Hide Comments"
+        onClick={[Function]}
+        raised={true}
+      />
+      <ButtonTooltipedInked
+        className="delete-button"
+        icon={true}
+        iconClassName="fa fa-trash"
+        inkTransitionEnterTimeout={450}
+        inkTransitionLeaveTimeout={300}
+        inkTransitionOverlap={150}
+        onClick={[Function]}
+        secondary={true}
+      />
+    </div>
+  </CardActions>
+  <Connect(Comments)
+    postId={1}
+  />
+</Card>
+`;
+
+exports[`Post component should render component correctly without comments 1`] = `
+<Card
+  className="post"
+  expanderIconChildren="keyboard_arrow_down"
+  expanderIconClassName="material-icons"
+  expanderTooltipPosition="left"
+>
+  <CardTitle
+    title="title"
+  />
+  <CardText
+    component="section"
+  >
+    body
+  </CardText>
+  <CardActions>
+    <div
+      className="action-buttons"
+    >
+      <ButtonTooltipedInked
+        inkTransitionEnterTimeout={450}
+        inkTransitionLeaveTimeout={300}
+        inkTransitionOverlap={150}
+        label="Show Comments"
+        onClick={[Function]}
+        raised={true}
+      />
+      <ButtonTooltipedInked
+        className="delete-button"
+        icon={true}
+        iconClassName="fa fa-trash"
+        inkTransitionEnterTimeout={450}
+        inkTransitionLeaveTimeout={300}
+        inkTransitionOverlap={150}
+        onClick={[Function]}
+        secondary={true}
+      />
+    </div>
+  </CardActions>
+</Card>
+`;

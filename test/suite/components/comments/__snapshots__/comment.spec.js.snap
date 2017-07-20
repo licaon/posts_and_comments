@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment component should render component correctly with props 1`] = `
+<Card
+  className="comment"
+  expanderIconChildren="keyboard_arrow_down"
+  expanderIconClassName="material-icons"
+  expanderTooltipPosition="left"
+>
+  <CardTitle
+    title="name"
+  />
+  <CardText
+    component="section"
+  >
+    body
+  </CardText>
+</Card>
+`;

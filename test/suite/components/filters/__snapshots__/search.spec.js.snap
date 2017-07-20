@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render component correctly 1`] = `
+<TextField
+  defaultValue="1"
+  fullWidth={true}
+  id="search"
+  label="Search"
+  leftIconStateful={true}
+  lineDirection="center"
+  onChange={[Function]}
+  passwordIconChildren="remove_red_eye"
+  rightIconStateful={true}
+  type="text"
+/>
+`;

@@ -9,6 +9,10 @@ const Posts = ({ posts }) => (
   </div>
 );
 
+Posts.defaultProps = {
+  posts: [],
+};
+
 Posts.propTypes = {
   posts: PropTypes.array,
 };

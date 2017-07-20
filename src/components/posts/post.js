@@ -30,11 +30,11 @@ const Post = ({ post, showComments, onDelete, onToggleComments, commentsLoaded }
 };
 
 Post.propTypes = {
-  post: PropTypes.object,
+  post: PropTypes.object.isRequired,
   showComments: PropTypes.bool,
   commentsLoaded: PropTypes.bool,
-  onDelete: PropTypes.func,
-  onToggleComments: PropTypes.func,
+  onDelete: PropTypes.func.isRequired,
+  onToggleComments: PropTypes.func.isRequired,
 };
 
 export default Post;

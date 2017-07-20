@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component should render component correctly with props 1`] = `
+<CircularProgress
+  centered={true}
+  className="loader"
+  determinateDashoffset={187}
+  id={1}
+  scale={1}
+  style={Object {}}
+/>
+`;

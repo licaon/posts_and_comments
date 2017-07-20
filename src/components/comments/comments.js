@@ -6,7 +6,7 @@ import Loading from 'src/components/basic/loading';
 import 'src/styles/components/comments/comments.scss';
 
 const Comments = ({ comments, postId }) => {
-  const commentsLoaded = () => comments.map(post => <Comment key={post.id} post={post} />);
+  const commentsLoaded = () => comments.map(comment => <Comment key={comment.id} comment={comment} />);
   return (
     <div className="comments">
       { typeof comments === 'undefined' ? <Loading id={postId} /> : commentsLoaded() }

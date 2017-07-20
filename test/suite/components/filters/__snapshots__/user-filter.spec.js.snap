@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserFilter component should render component correctly 1`] = `
+<SelectField
+  className="md-full-width"
+  defaultValue="1"
+  iconChildren="arrow_drop_down"
+  id="users"
+  itemLabel="name"
+  itemValue="id"
+  keyboardMatchingTimeout={1000}
+  label="Users"
+  lineDirection="left"
+  menuItems={
+    Array [
+      "1",
+    ]
+  }
+  onChange={[Function]}
+  position="tl"
+  stretchList={true}
+/>
+`;
+
+exports[`UserFilter component should render component correctly without users 1`] = `
+<SelectField
+  className="md-full-width"
+  defaultValue=""
+  iconChildren="arrow_drop_down"
+  id="users"
+  itemLabel="name"
+  itemValue="id"
+  keyboardMatchingTimeout={1000}
+  label="Users"
+  lineDirection="left"
+  menuItems={Array []}
+  onChange={[Function]}
+  position="tl"
+  stretchList={true}
+/>
+`;
